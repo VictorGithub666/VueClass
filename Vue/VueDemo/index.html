@@ -12,7 +12,7 @@
 
     <h3>Profile</h3>
 
-    <p><strong>NAME : </strong>{{name}}</p>
+    <p><strong>NAME : </strong>{{name}} </p>
     <p><strong>AGE : </strong>{{age}}</p>
     <p v-if="isMale" ><strong>GENDER : </strong>Male</p>
     <p><strong>WEIGHT : </strong>{{weight}}</p>
@@ -30,24 +30,26 @@
             },
 
                 methods: {
-                    weight() {
+                    myweight() {
                         console.log(this.weight);
                     },
-                    methods: {
-                    age() {
+                    
+                    myage() {
                         console.log(this.age);
                     },
-                    salutation() {
+
+                    mysalutation() {
                         console.log(this.name);
                     },
                 },
-                },
+             });
 
-          
+             const vm = app.mount(".app");
 
-        });
-
-        app.mount(".app");
+// Call the methods to display in the browser's console
+vm.myweight();
+vm.myage();
+vm.mysalutation();
     </script>
 </body>
 </html>
