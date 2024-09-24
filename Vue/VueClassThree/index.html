@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+   <h1>{{name}} - {{age}} - {{greeting()}}</h1>
+   <br>
+   <button @click="age++">Click Me</button>
+   <button @click="age--">Click Me</button>
+   <h1 v-if="isMale">Man</h1>
+   <h1 v-else>Woman</h1>
+</div>
+    <script>
+const app = Vue.createApp({
+    data() {
+        return {
+            name: 'John Doe',
+            age:25,
+            isMale:true
+        }
+    },
+// methods
+methods: {
+    greeting(){
+        console.log(this.name);
+    }
+}
+});
+
+
+app.mount(".app")
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+    <div class="profile">
+        <img v-bind:src="profileurl" alt="userimage">
+   <h1>{{username}}</h1>
+   <p>{{userbio}}</p>
+   <p>{{userLocation}}</p>
+   <h4 v-for="skill in Skills">
+    <ul>
+        {{skill}}
+    </ul>
+   </h4>
+   <h4>Login</h4>
+   <br>
+</div>
+</div>
+ <script src="./main.js"></script>
+</body>
+</html>

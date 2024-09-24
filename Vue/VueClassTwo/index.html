@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body class="app">
+
+    <h1>USER DATA</h1>
+
+    <h3>Profile</h3>
+
+    <p><strong>NAME : </strong>{{name}} </p>
+    <p><strong>AGE : </strong>{{age}}</p>
+    <p v-if="isMale" ><strong>GENDER : </strong>Male</p>
+    <p><strong>WEIGHT : </strong>{{weight}}</p>
+    
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return{
+                };
+            },
+
+                methods: {
+                    
+                },
+             });
+
+             const vm = app.mount(".app");
+
+// Call the methods to display in the browser's console
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="card">
+        <div class="post" v-for="post in posts">
+          <h3>{{ post.name }}</h3>
+          <p>Username: {{ post.username }}</p>
+          <p>Email: {{ post.email }}</p>
+          <p>Address:</p>
+          <div class="address">
+            <p>Street: {{ post.address.street }}</p>
+            <p>Suite: {{ post.address.suite }}</p>
+            <p>City: {{ post.address.city }}</p>
+            <p>Zipcode: {{ post.address.zipcode }}</p>
+            <p>Geo Coordinates:</p>
+            <p>Latitude: {{ post.address.geo.lat }}</p>
+            <p>Longitude: {{ post.address.geo.lng }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
